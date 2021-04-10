@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Covid Portal - Together we help each other!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <br />
+  <br />
+  <center>
+    <h1>Covid Portal</h1>
+  </center>
+  <div class="login" id="login"></div>
+  <div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="check-tab" data-toggle="tab" href="#check" role="tab" aria-controls="check"
+          aria-selected="true">Check My City</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="report-tab" data-toggle="tab" href="#report" role="tab" aria-controls="report"
+          aria-selected="false">Report Affected Member</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="login-tab" data-toggle="tab" href="#login-div" role="tab" aria-controls="login"
+          aria-selected="false">Admin</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="check" role="tabpanel" aria-labelledby="check-tab">
+        <br />
+        <br />
+        <form>
+          <div class="form-group">
+            <label for="city-get-input"><b>Check if your city affected:</b></label>
+            <input type="text" class="form-control" id="city-get-input" aria-describedby="checkCity"
+              placeholder="Enter Your City Name" />
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="getAffectedMembers();return false;">
+            Check
+          </button>
+        </form>
+        <br />
+        <br />
+        <div id="result-container">
+          <div id="result-text"></div>
+          <br />
+          <div id="result-image"></div>
+        </div>
+        <div id="loader" style="display: none">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="report" role="tabpanel" aria-labelledby="report-tab">
+        <br />
+        <br />
+        <form>
+          <div class="form-group">
+            <div class="city-post-input">
+              <label for="exampleInputEmail1"><b>Firstname:</b></label>
+              <input type="text" class="form-control" id="first-name-input" aria-describedby="fistPost"
+                placeholder="Enter First name" />
+              <br />
+              <label for="exampleInputEmail1"><b>Lastname:</b></label>
+              <input type="text" class="form-control" id="last-name-input" aria-describedby="lastPost"
+                placeholder="Enter Last name" />
+              <br />
+              <label for="exampleInputEmail1"><b>Phone number:</b></label>
+              <input type="text" class="form-control" id="phone-number-input" aria-describedby="phonePost"
+                placeholder="Enter Phone number with country code (+1, +91)" />
+              <br />
+              <label for="exampleInputEmail1"><b>City name:</b></label>
+              <input type="text" class="form-control" id="city-post-input" aria-describedby="cityPost"
+                placeholder="Enter City Name" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="postAffectedMemberDetails();return false;">
+            Report
+          </button>
+        </form>
+      </div>
+      <div class="tab-pane fade" id="login-div" role="tabpanel" aria-labelledby="login-tab">
+        <br />
+        <br />
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" onclick="moveToSignIn();return false;">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>UserApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="home.css">
+    <script src="main.js"></script>
+    <script src="https://js.zohostatic.com/catalystclient/1.0.0/catalystWebSDK.js"></script>
+    <script>
+      var cred = new catalystCredential();
+      cred.loadFromJSON({
+        project_Id: 2701000000003009, //Replace this value with your project ID
+        zaid: 10027686030, //Replace this value with your ZAID
+      });
+      catalyst.initApp(cred, {});
+      catalyst.auth.signIn("login");
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <center>
+        <br />
+        <br />
+        <br />
+        <h1>Covid Portal</h1>
+      </center>
+    </header>
+    <div class="login" id="login"></div>
+  </body>
+</html>

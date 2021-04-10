@@ -1,0 +1,35 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": 2701000000003009,
+      "name": "CovidPortal",
+      "domain": {
+        "id": 10027686030,
+        "name": "covidportal-747668416.development"
+      },
+      "env": [
+        {
+          "idx": 1,
+          "id": "747668416",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ],
+  "migration": {
+    "1.4.0": {
+      "completed": true
+    },
+    "last_success": "1.4.0"
+  }
+}

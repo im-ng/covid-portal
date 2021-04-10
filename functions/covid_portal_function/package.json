@@ -1,0 +1,10 @@
+{
+	"name": "covid_portal_function",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "author.email.id",
+	"dependencies": {
+		"express": "^4.17.1",
+		"zcatalyst-sdk-node": "latest"
+	}
+}
